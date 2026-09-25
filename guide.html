@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fd">
+  <meta name="description" content="ScreenMark 使用指南：安装与授权、三种截图方式、滚动截屏、标注、文字提取、翻译及保存。">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <title>使用指南 — ScreenMark</title>
+</head>
+<body class="guide-page">
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header"><div class="shell nav-inner"><a class="brand" href="./" aria-label="ScreenMark 首页"><img src="assets/icon.png" alt="" width="37" height="37"><span>ScreenMark</span></a><nav aria-label="主导航"><a class="current" href="guide.html" aria-current="page">使用指南</a><a href="https://github.com/IndenScale/ScreenMark/releases/tag/v0.1.0">版本说明</a><a class="nav-download" href="https://github.com/IndenScale/ScreenMark/releases/download/v0.1.0/ScreenMark-0.1.0-macos-arm64.zip">下载 Mac 版</a></nav></div></header>
+  <main id="main" class="shell guide-main">
+    <div class="guide-heading"><a class="back-link" href="./">← 返回首页</a><h1>两分钟上手<br>ScreenMark。</h1><p>按下面的顺序操作，完成第一张截图；遇到问题可直接跳到对应步骤。</p></div>
+    <div class="guide-layout">
+      <aside class="guide-toc" aria-label="本页目录"><p>本页内容</p><a href="#install">下载与安装</a><a href="#permissions">准备权限</a><a href="#capture">开始截图</a><a href="#scroll">滚动截屏</a><a href="#finish">编辑与保存</a><a href="#questions">常见问题</a></aside>
+      <div class="guide-content">
+        <section id="install" class="guide-section"><h2>下载与安装</h2><ol><li>下载 <a href="https://github.com/IndenScale/ScreenMark/releases/download/v0.1.0/ScreenMark-0.1.0-macos-arm64.zip">ScreenMark ZIP 安装包</a>并解压。</li><li>将 <strong>ScreenMark.app</strong> 拖进“应用程序”，然后打开。它会驻留在屏幕顶部的菜单栏。</li><li>按首次启动指引完成权限设置。</li></ol><div class="guide-callout"><strong>首次打开被 macOS 拦截？</strong><p>当前版本尚未经过 Apple 公证。尝试打开后，前往“系统设置 → 隐私与安全性”，找到 ScreenMark 的提示，选择“仍要打开”，再确认打开。仅从本页链接到的 GitHub 发布页下载。操作细节见 <a href="https://support.apple.com/zh-cn/102445">Apple 官方说明</a>。</p></div><p class="guide-subnote">适用设备：Apple 芯片 Mac，macOS 15 或更新版本。目前没有 Intel 版。</p></section>
+        <section id="permissions" class="guide-section"><h2>准备权限</h2><p>首次启动会出现三步指引。按提示开启：</p><div class="permission-row"><strong>屏幕录制</strong><span>允许 ScreenMark 读取准备截取的屏幕内容。</span></div><div class="permission-row"><strong>辅助功能</strong><span>允许 ScreenMark 接管截图快捷键，避免系统截图工具同时启动。</span></div><p>回到应用后，授权状态会自动更新。若系统要求重新打开应用，按系统提示操作。暂未授予辅助功能权限时，仍可通过菜单栏启动截图。</p></section>
+        <section id="capture" class="guide-section"><h2>开始截图</h2><p>点击菜单栏中的 ScreenMark 图标，或使用默认快捷键：</p><div class="shortcut-list"><div><span>全屏截图</span><kbd>⇧⌘3</kbd></div><div><span>窗口截图</span><kbd>⇧⌘4</kbd></div><div><span>选取截图</span><kbd>⇧⌘5</kbd></div></div><p>选取截图时，<strong>拖动</strong>可以框选区域；<strong>点按高亮窗口</strong>可以选取整个窗口。选好后仍可移动或调整选框。快捷键可在“设置”中分别修改。</p></section>
+        <section id="scroll" class="guide-section"><h2>滚动截屏</h2><ol><li>用选取截图框住要保留的区域。</li><li>点击工具栏上的“滚动截屏”，然后在原应用中向上或向下滚动。</li><li>观察长图预览。内容收集完成后，点击“完成”；若想继续标注，先点击“编辑”。</li></ol><p>滚动截屏会保持你最初选框的宽度和位置。页面内容无法可靠定位时，ScreenMark 会提示你，不会猜测并拼接未知内容。复杂页面可能无法得到完整长图。</p></section>
+        <section id="finish" class="guide-section"><h2>编辑与保存</h2><p>选好画面后，工具栏可添加画笔、文字、马赛克，也可使用“文字提取”或“翻译”。文字提取在本机完成；翻译使用 macOS 的语言包，首次下载语言包需要联网。</p><div class="shortcut-list"><div><span>完成截图</span><kbd>⌘Return</kbd></div><div><span>另存为</span><kbd>⌘S</kbd></div><div><span>退出当前工具／取消</span><kbd>Esc</kbd></div></div><p>编辑时第一次按 <kbd>Esc</kbd> 退出当前工具，再按一次取消截图。默认完成方式为复制并保存 PNG。图片保存在 <code>~/Pictures/ScreenShots/ScreenMark/YYYY-MM-DD/</code>；可在设置中修改位置、格式和完成方式。</p></section>
+        <section id="questions" class="guide-section"><h2>常见问题</h2><details><summary>截图快捷键和 macOS 原生截图同时出现？</summary><p>检查 ScreenMark 的辅助功能权限是否已启用。授权后回到应用，状态会自动更新；必要时按系统提示重新打开应用。</p></details><details><summary>找不到刚保存的图片？</summary><p>在 ScreenMark 设置中打开今日文件夹。默认会按本地日期放进 <code>~/Pictures/ScreenShots/ScreenMark/</code> 的子文件夹。也请检查设置中的“完成后”动作是否包含保存。</p></details><details><summary>为什么滚动截屏没有继续增长？</summary><p>可能已回到捕获过的区域，或当前画面缺少可靠的位置线索。请留意屏幕提示，并尝试在内容稳定后继续滚动。</p></details><details><summary>文字提取和翻译需要联网吗？</summary><p>文字提取在本机完成。翻译可使用已下载的 macOS 语言包；首次下载新的语言包需要联网。</p></details></section>
+        <div class="guide-end"><h2>准备好截第一张图？</h2><a class="button button-primary" href="https://github.com/IndenScale/ScreenMark/releases/download/v0.1.0/ScreenMark-0.1.0-macos-arm64.zip">下载 ScreenMark <span aria-hidden="true">↓</span></a></div>
+      </div>
+    </div>
+  </main>
+  <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 ScreenMark · IndenScale</span><div><a href="./">首页</a><a href="https://github.com/IndenScale/ScreenMark/releases">GitHub 发布页</a></div></div></footer>
+</body>
+</html>

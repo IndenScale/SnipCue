@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f8fd">
+  <meta name="description" content="ScreenMark 是一款 macOS 菜单栏截图工具。截取区域、窗口、全屏和滚动内容，直接标注、提取文字、翻译并保存。">
+  <meta property="og:title" content="ScreenMark — 截下来，标清楚">
+  <meta property="og:description" content="一款顺手的 Mac 截图工具：滚动截屏、标注、文字提取和翻译，都在截图之后接着完成。">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/icon.png">
+  <link rel="icon" href="assets/icon.png" type="image/png">
+  <link rel="stylesheet" href="styles.css">
+  <title>ScreenMark — 截下来，标清楚</title>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+  <header class="site-header">
+    <div class="shell nav-inner">
+      <a class="brand" href="./" aria-label="ScreenMark 首页"><img src="assets/icon.png" alt="" width="37" height="37"><span>ScreenMark</span></a>
+      <nav aria-label="主导航">
+        <a href="guide.html">使用指南</a>
+        <a href="https://github.com/IndenScale/ScreenMark/releases/tag/v0.1.0">版本说明</a>
+        <a class="nav-download" href="https://github.com/IndenScale/ScreenMark/releases/download/v0.1.0/ScreenMark-0.1.0-macos-arm64.zip">下载 Mac 版</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="intro-line"><span class="intro-mark" aria-hidden="true"></span> 为 macOS 设计的菜单栏截图工具</p>
+        <h1 id="hero-title">截下来，<br>标清楚。</h1>
+        <p class="hero-lead">选取屏幕上的内容，直接标注重点、提取文字或翻译。长页面也能接着滚动截取，完成后复制或保存。</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="https://github.com/IndenScale/ScreenMark/releases/download/v0.1.0/ScreenMark-0.1.0-macos-arm64.zip">下载 ScreenMark <span aria-hidden="true">↓</span></a>
+          <a class="text-link" href="guide.html">先看如何使用 <span aria-hidden="true">↗</span></a>
+        </div>
+        <p class="system-note">v0.1.0 · macOS 15 或更新版本 · Apple 芯片</p>
+      </div>
+      <div class="hero-visual" role="img" aria-label="示意图：在窗口中框选区域，随后使用截图工具栏标注和完成">
+        <div class="visual-topline"><span>ScreenMark 操作示意</span><span class="visual-cursor">⌖</span></div>
+        <div class="sample-window" aria-hidden="true">
+          <div class="sample-titlebar"><span class="window-dots"><i></i><i></i><i></i></span><span>项目说明</span><span class="window-control">⋯</span></div>
+          <div class="sample-document">
+            <div class="sample-kicker">设计记录</div>
+            <div class="sample-heading">让关键内容<br>一眼可见。</div>
+            <div class="sample-paragraph"></div><div class="sample-paragraph short"></div>
+            <div class="sample-chart"><span></span><span></span><span></span><span></span><span></span></div>
+          </div>
+        </div>
+        <div class="capture-rect" aria-hidden="true"><span class="handle nw"></span><span class="handle ne"></span><span class="handle sw"></span><span class="handle se"></span><span class="capture-size">1280 × 840</span></div>
+        <div class="capture-toolbar" aria-hidden="true"><span class="tool-icon">✎</span><span class="tool-icon">T</span><span class="tool-icon">▦</span><span class="tool-divider"></span><span class="tool-icon">↧</span><span class="tool-icon confirm">✓</span></div>
+      </div>
+    </section>
+
+    <section class="flow-section" aria-labelledby="flow-title">
+      <div class="shell">
+        <div class="section-heading"><h2 id="flow-title">从按下快捷键，到发出图片。</h2><p>一次截图里需要做的事，顺着做完。</p></div>
+        <div class="flow-grid">
+          <article class="flow-step"><span class="step-no">01</span><div><h3>选取画面</h3><p>截取全屏、窗口或任意区域。遇到长页面，框选后进入滚动截屏。</p></div></article>
+          <article class="flow-step"><span class="step-no">02</span><div><h3>处理内容</h3><p>用画笔、文字和马赛克标明重点，也能提取画面中的文字或翻译。</p></div></article>
+          <article class="flow-step"><span class="step-no">03</span><div><h3>完成并保存</h3><p>按需复制、保存或另存为。默认按日期整理图片，回头也容易找到。</p></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="details-section shell" aria-labelledby="details-title">
+      <div class="details-intro"><h2 id="details-title">熟悉的截图方式，<br>多一步也顺手。</h2><p>ScreenMark 驻留在菜单栏。日常截图可以直接用快捷键开始，进入选区后再决定要不要编辑。</p><a class="text-link" href="guide.html#capture">查看快捷键和操作步骤 <span aria-hidden="true">↗</span></a></div>
+      <div class="detail-list">
+        <div class="detail-item"><span class="detail-glyph" aria-hidden="true">⌗</span><div><h3>三种快速截图</h3><p>全屏、窗口、选取区域分别使用 ⇧⌘3、⇧⌘4、⇧⌘5。快捷键可以在设置中更改。</p></div></div>
+        <div class="detail-item"><span class="detail-glyph" aria-hidden="true">↕</span><div><h3>滚动截屏</h3><p>先框选，再滚动原页面。预览随长图更新；无法可靠拼接时，应用会给出提示。</p></div></div>
+        <div class="detail-item"><span class="detail-glyph" aria-hidden="true">文</span><div><h3>文字提取与翻译</h3><p>提取文字在本机完成。翻译使用 macOS 语言包，首次下载语言包时需要联网。</p></div></div>
+      </div>
+    </section>
+
+    <section class="ready-section shell" aria-labelledby="ready-title">
+      <div><h2 id="ready-title">打开，授权，开始截图。</h2><p>首次启动会引导你设置屏幕录制和辅助功能权限。两分钟上手指南说明安装、滚动截屏和保存位置。</p><a class="button button-light" href="guide.html">阅读使用指南 <span aria-hidden="true">↗</span></a></div>
+      <div class="ready-icon" aria-hidden="true"><img src="assets/icon.png" alt="" width="132" height="132"></div>
+    </section>
+
+    <section class="download-section shell" aria-labelledby="download-title"><div><h2 id="download-title">下载 ScreenMark</h2><p>macOS 15+ · Apple 芯片 · v0.1.0</p><p class="distribution-note">当前版本采用本地签名，尚未经过 Apple 公证。首次打开可能需要在“系统设置 → 隐私与安全性”中选择“仍要打开”。请仅从下方 GitHub 发布页下载。</p></div><a class="button button-primary" href="https://github.com/IndenScale/ScreenMark/releases/download/v0.1.0/ScreenMark-0.1.0-macos-arm64.zip">下载 ZIP 安装包 <span aria-hidden="true">↓</span></a></section>
+  </main>
+
+  <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 ScreenMark · IndenScale</span><div><a href="guide.html">使用指南</a><a href="https://github.com/IndenScale/ScreenMark/releases">GitHub 发布页</a></div></div></footer>
+</body>
+</html>
