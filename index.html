@@ -11,6 +11,7 @@
   <meta property="og:image" content="assets/icon.png">
   <link rel="icon" href="assets/icon.png" type="image/png">
   <link rel="stylesheet" href="styles.css">
+  <script src="carousel.js" defer></script>
   <title>ScreenMark — 截下来，标清楚</title>
 </head>
 <body>
@@ -38,19 +39,59 @@
         </div>
         <p class="system-note">v0.1.0 · macOS 15 或更新版本 · Apple 芯片</p>
       </div>
-      <div class="hero-visual" role="img" aria-label="示意图：在窗口中框选区域，随后使用截图工具栏标注和完成">
-        <div class="visual-topline"><span>ScreenMark 操作示意</span><span class="visual-cursor">⌖</span></div>
-        <div class="sample-window" aria-hidden="true">
-          <div class="sample-titlebar"><span class="window-dots"><i></i><i></i><i></i></span><span>项目说明</span><span class="window-control">⋯</span></div>
-          <div class="sample-document">
-            <div class="sample-kicker">设计记录</div>
-            <div class="sample-heading">让关键内容<br>一眼可见。</div>
-            <div class="sample-paragraph"></div><div class="sample-paragraph short"></div>
-            <div class="sample-chart"><span></span><span></span><span></span><span></span><span></span></div>
+      <div class="hero-showcase" aria-label="ScreenMark 操作示意轮播" aria-roledescription="轮播图">
+        <div class="showcase-stage" id="showcase-stage">
+          <div class="hero-visual showcase-slide" role="group" aria-roledescription="幻灯片" aria-label="第 1 张，共 3 张：框选并标注">
+            <div class="visual-topline"><span>框选并标注</span><span class="visual-cursor">⌖</span></div>
+            <div class="sample-window" aria-hidden="true">
+              <div class="sample-titlebar"><span class="window-dots"><i></i><i></i><i></i></span><span>项目说明</span><span class="window-control">⋯</span></div>
+              <div class="sample-document">
+                <div class="sample-kicker">设计记录</div>
+                <div class="sample-heading">让关键内容<br>一眼可见。</div>
+                <div class="sample-paragraph"></div><div class="sample-paragraph short"></div>
+                <div class="sample-chart"><span></span><span></span><span></span><span></span><span></span></div>
+              </div>
+            </div>
+            <div class="capture-rect" aria-hidden="true"><span class="handle nw"></span><span class="handle ne"></span><span class="handle sw"></span><span class="handle se"></span><span class="capture-size">1280 × 840</span></div>
+            <div class="capture-toolbar" aria-hidden="true"><span class="tool-icon">✎</span><span class="tool-icon">T</span><span class="tool-icon">▦</span><span class="tool-divider"></span><span class="tool-icon">↧</span><span class="tool-icon confirm">✓</span></div>
+          </div>
+          <div class="hero-visual showcase-slide scroll-slide" role="group" aria-roledescription="幻灯片" aria-label="第 2 张，共 3 张：滚动截取长页面" hidden>
+            <div class="visual-topline"><span>滚动截取长页面</span><span class="visual-cursor">↕</span></div>
+            <div class="sample-window scroll-window" aria-hidden="true">
+              <div class="sample-titlebar"><span class="window-dots"><i></i><i></i><i></i></span><span>阅读页面</span><span class="window-control">⋯</span></div>
+              <div class="scroll-document">
+                <span class="scroll-eyebrow">阅读笔记 · 2026</span>
+                <strong>一页内容，<br>完整留下。</strong>
+                <span class="scroll-line wide"></span><span class="scroll-line"></span><span class="scroll-line short"></span>
+                <span class="scroll-block"></span>
+                <span class="scroll-line wide"></span><span class="scroll-line"></span><span class="scroll-line short"></span>
+                <span class="scroll-block second"></span>
+              </div>
+              <div class="scroll-selection"></div>
+            </div>
+            <div class="scroll-preview" aria-hidden="true"><span class="preview-label">滚动截屏</span><div class="preview-page"><i></i><i></i><i></i><b></b><i></i><i></i><i></i><b></b></div><span class="preview-down">↓</span></div>
+          </div>
+          <div class="hero-visual showcase-slide text-slide" role="group" aria-roledescription="幻灯片" aria-label="第 3 张，共 3 张：提取文字与翻译" hidden>
+            <div class="visual-topline"><span>提取文字与翻译</span><span class="visual-cursor">文</span></div>
+            <div class="sample-window text-window" aria-hidden="true">
+              <div class="sample-titlebar"><span class="window-dots"><i></i><i></i><i></i></span><span>旅行计划</span><span class="window-control">⋯</span></div>
+              <div class="text-document"><span>在截图里找到文字</span><strong>把看到的，<br>变成可用的。</strong><p>旅行不必赶路，沿途的风景也值得停下来。</p><div class="text-highlight">沿途的风景也值得停下来。</div></div>
+            </div>
+            <div class="text-result" aria-hidden="true"><span class="result-badge">文字提取</span><strong>沿途的风景也值得停下来。</strong><span class="result-divider"></span><span class="result-badge translation">翻译</span><p>The scenery along the way is worth pausing for.</p></div>
           </div>
         </div>
-        <div class="capture-rect" aria-hidden="true"><span class="handle nw"></span><span class="handle ne"></span><span class="handle sw"></span><span class="handle se"></span><span class="capture-size">1280 × 840</span></div>
-        <div class="capture-toolbar" aria-hidden="true"><span class="tool-icon">✎</span><span class="tool-icon">T</span><span class="tool-icon">▦</span><span class="tool-divider"></span><span class="tool-icon">↧</span><span class="tool-icon confirm">✓</span></div>
+        <div class="showcase-nav" hidden>
+          <span class="showcase-caption" aria-live="polite">01 / 03　框选并标注</span>
+          <div class="showcase-controls">
+            <button class="showcase-arrow" type="button" data-direction="-1" aria-label="上一张" aria-controls="showcase-stage">←</button>
+            <div class="showcase-dots" role="group" aria-label="选择展示画面">
+              <button type="button" data-slide="0" aria-label="查看框选并标注" aria-current="true" aria-controls="showcase-stage"></button>
+              <button type="button" data-slide="1" aria-label="查看滚动截屏" aria-controls="showcase-stage"></button>
+              <button type="button" data-slide="2" aria-label="查看文字提取与翻译" aria-controls="showcase-stage"></button>
+            </div>
+            <button class="showcase-arrow" type="button" data-direction="1" aria-label="下一张" aria-controls="showcase-stage">→</button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -79,7 +120,6 @@
       <div class="ready-icon" aria-hidden="true"><img src="assets/icon.png" alt="" width="132" height="132"></div>
     </section>
 
-    <section class="download-section shell" aria-labelledby="download-title"><div><h2 id="download-title">下载 ScreenMark</h2><p>macOS 15+ · Apple 芯片 · v0.1.0</p><p class="distribution-note">当前版本采用本地签名，尚未经过 Apple 公证。首次打开可能需要在“系统设置 → 隐私与安全性”中选择“仍要打开”。请仅从下方 GitHub 发布页下载。</p></div><a class="button button-primary" href="https://github.com/IndenScale/ScreenMark/releases/download/v0.1.0/ScreenMark-0.1.0-macos-arm64.zip">下载 ZIP 安装包 <span aria-hidden="true">↓</span></a></section>
   </main>
 
   <footer class="site-footer"><div class="shell footer-inner"><span>© 2026 ScreenMark · IndenScale</span><div><a href="guide.html">使用指南</a><a href="https://github.com/IndenScale/ScreenMark/releases">GitHub 发布页</a></div></div></footer>
